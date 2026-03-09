@@ -1,16 +1,132 @@
-# React + Vite
+# 📚 Book Price Comparator – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web desenvolvida em **React + Vite** para pesquisar livros e visualizar informações obtidas de diferentes fontes através de uma API própria.
 
-Currently, two official plugins are available:
+A aplicação permite que o usuário pesquise pelo nome de um livro e visualize:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Título do livro
+* Autor
+* Capa
+* Editora
+* Informações retornadas por diferentes APIs
+* Ofertas disponíveis para compra
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 🚀 Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+* React
+* Vite
+* JavaScript
+* Fetch API
+* CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🔗 Integração com Backend
+
+Este frontend consome a API desenvolvida no projeto:
+
+**book-price-api**
+
+Endpoint utilizado:
+
+```
+GET /books/search?q=nome-do-livro
+```
+
+Exemplo de requisição:
+
+```
+http://localhost:3000/books/search?q=harry%20potter
+```
+
+A API retorna um JSON com os livros encontrados e possíveis ofertas de preço.
+
+---
+
+# 📂 Estrutura do projeto
+
+```
+book-price-frontend
+│
+├── public
+│
+├── src
+│   ├── components
+│   │   ├── BookCard.jsx
+│   │   ├── PriceList.jsx
+│   │   └── SearchBar.jsx
+│   │
+│   ├── services
+│   │   └── api.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+# ⚙️ Como executar o projeto
+
+### 1️⃣ Clonar o repositório
+
+```
+git clone https://github.com/seuusuario/book-price-frontend.git
+```
+
+### 2️⃣ Acessar a pasta do projeto
+
+```
+cd book-price-frontend
+```
+
+### 3️⃣ Instalar as dependências
+
+```
+npm install
+```
+
+### 4️⃣ Executar o projeto
+
+```
+npm run dev
+```
+
+A aplicação estará disponível em:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🔎 Como usar
+
+1. Digite o nome de um livro no campo de busca.
+2. Clique em **Pesquisar**.
+3. A aplicação irá consultar a API backend.
+4. Os livros encontrados serão exibidos na tela.
+
+Caso existam ofertas disponíveis, elas também serão exibidas.
+
+---
+
+# 🧠 Funcionalidades
+
+* Pesquisa de livros por nome
+* Exibição de capa e dados do livro
+* Integração com API externa
+* Interface simples e responsiva
+* Consumo de API REST
+
+---
+
+# 👩‍💻 Autor
+
+**Giovana Tochtrop do Nascimento**
